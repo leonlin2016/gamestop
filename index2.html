@@ -76,84 +76,6 @@
             background-color: #0a3e4f;
         }
         
-        /* 页脚样式 - 黑色背景 */
-        .footer {
-            background-color: #1a1a1a;
-            color: #b0b0b0;
-            padding: 40px 0;
-            margin-top: 50px;
-            border-top: 1px solid #333;
-        }
-        
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        .footer-divider {
-            height: 1px;
-            background-color: #444;
-            margin: 20px 0;
-        }
-        
-        .footer-nav {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin: 30px 0;
-        }
-        
-        .footer-nav-group {
-            margin: 0 20px;
-            text-align: center;
-        }
-        
-        .footer-nav a {
-            color: #b0b0b0;
-            text-decoration: none;
-            display: inline-block;
-            padding: 5px 10px;
-            transition: color 0.2s;
-        }
-        
-        .footer-nav a:hover {
-            color: #ffffff;
-        }
-        
-        .footer-intro {
-            max-width: 800px;
-            margin: 0 auto 30px;
-            line-height: 1.6;
-        }
-        
-        .footer-intro p {
-            margin-bottom: 15px;
-        }
-        
-        .footer-contact {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 14px;
-        }
-        
-        .footer-contact a {
-            color: #b0b0b0;
-            text-decoration: none;
-        }
-        
-        .footer-contact a:hover {
-            text-decoration: underline;
-            color: #ffffff;
-        }
-        
-        .footer-copyright {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 14px;
-            color: #777;
-        }
-        
         /* 响应式调整 */
         @media (max-width: 1200px) {
             .games-grid {
@@ -180,14 +102,6 @@
         @media (max-width: 768px) {
             .games-grid {
                 grid-template-columns: repeat(2, 1fr); /* 小屏幕一行两列 */
-            }
-            
-            .footer-nav {
-                flex-direction: column;
-            }
-            
-            .footer-nav-group {
-                margin: 10px 0;
             }
         }
         
@@ -242,7 +156,7 @@
         <main class="content">
             <!-- BEST GAMES SECTION -->
             <section class="hero">
-                <h2>Play your favorite unblocked games from anywhere</h2>
+                <h2>HTML5 GAMES FOR YOUR WEBSITE</h2>
                 <div class="best-badge">
                     <i class="fas fa-thumbs-up"></i> BEST
                 </div>
@@ -263,17 +177,14 @@
                             <img src="images/cannon-balls.jpg" alt="Cannon Balls 3D">
                             <h3>Cannon Balls 3D</h3>
                         </div>
-						<a href="2048.html">
                         <div class="game-card">
-                            <img src="images/2048.jpg" alt="2048">
-                            <h3>2048</h3>
+                            <img src="images/element-blocks.jpg" alt="Element Blocks">
+                            <h3>Element Blocks</h3>
                         </div>
-						<a href="MonsterSurvivors.html">
                         <div class="game-card">
-                            <img src="images/monster-survivors.jpg" alt="Monster Survivors">
-                            <h3>Monster Survivors</h3>
+                            <img src="images/zoo-boom.jpg" alt="Zoo Boom">
+                            <h3>Zoo Boom</h3>
                         </div>
-						</a>
                         <div class="game-card">
                             <img src="images/moto-x3m.jpg" alt="Moto X3M Pool Party">
                             <h3>Moto X3M Pool Party</h3>
@@ -366,56 +277,6 @@
             </div>
         </main>
     </div>
-
-    <!-- 页脚部分 - 黑色背景，英文内容 -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-intro">
-                <p>Are you looking for a place to play your favorite unblocked games? Look no further than HTML5 Games.</p>
-                <p>We offer a community of gamers who are always looking for new challengers. With our easy-to-use browser-based platform, you can start playing right away.</p>
-                <p>So come and join the fun today! We developed this website so you can play your favorite games from anywhere.</p>
-            </div>
-            
-            <div class="footer-divider"></div>
-            
-            <div class="footer-nav">
-                <div class="footer-nav-group">
-                    <a href="index.html">Home</a>
-                    <a href="new.html">New</a>
-                    <a href="Best.html">Best</a>
-                    <a href="#">Action</a>
-                </div>
-                
-                <div class="footer-nav-group">
-                    <a href="#">Car</a>
-                    <a href="#">Driving</a>
-                    <a href="#">Multiplayer</a>
-                    <a href="#">Shooting</a>
-                </div>
-                
-                <div class="footer-nav-group">
-                    <a href="#">.io Games</a>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Chat</a>
-                    <a href="about.html">About</a>
-                </div>
-                
-                <div class="footer-nav-group">
-                    <a href="#">Game Developers</a>
-                    <a href="#">Self-hosting</a>
-                    <a href="#">Contact</a>
-                </div>
-            </div>
-            
-            <div class="footer-contact">
-                <p>Email us at: <a href="mailto:contact@html5gd">contact@gamestop.cv</a></p>
-            </div>
-            
-            <div class="footer-copyright">
-                <p>Developed by HTML5 Games &copy; 2025 All Rights Reserved</p>
-            </div>
-        </div>
-    </footer>
 
     <script src="script.js"></script>
 </body>

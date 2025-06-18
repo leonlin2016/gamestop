@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Games - About</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* 底部模块样式 */
+        .footer-info {
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 40px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .footer-info h2 {
+            color: #0e566c;
+            font-size: 24px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+        
+        .footer-info p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: #444;
+        }
+        
+        .game-description {
+            margin-top: 25px;
+        }
+        
+        .game-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #0e566c;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+        
+        .game-info {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-left: 4px solid #0e566c;
+        }
+        
+        .footer-bottom {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        
+        .footer-links a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .copyright {
+            font-size: 14px;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="logo">
+                <img src="images/html5-logo.png" alt="HTML5 Games">
+                <h1>HTML<span class="logo-number">5</span> GAMES</h1>
+            </div>
+            <div class="language-selector">
+                <button class="lang-btn">EN <i class="fas fa-caret-down"></i></button>
+                <div class="language-dropdown">
+                    <a href="#" data-lang="en">English</a>
+                    <a href="#" data-lang="zh">中文</a>
+                    <a href="#" data-lang="es">Español</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <nav class="sidebar" id="sidebar">
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="new.html"><i class="fas fa-star"></i> New</a></li>
+                <li><a href="Best.html"><i class="fas fa-thumbs-up"></i> Best</a></li>
+                <li><a href="#"><i class="fas fa-th"></i> Match 3</a></li>
+                <li><a href="#"><i class="fas fa-bullseye"></i> Bubble Shooter</a></li>
+                <li><a href="#"><i class="fas fa-puzzle-piece"></i> Puzzle</a></li>
+                <li><a href="#"><i class="fas fa-question-circle"></i> Quiz</a></li>
+                <li><a href="#"><i class="fas fa-list"></i> Cards</a></li>
+                <li><a href="#"><i class="fas fa-female"></i> Girls</a></li>
+                <li><a href="#"><i class="fas fa-running"></i> Jump & Run</a></li>
+                <li><a href="#"><i class="fas fa-gamepad"></i> Arcade</a></li>
+                <li><a href="#"><i class="fas fa-flag-checkered"></i> Racing</a></li>
+                <li><a href="#"><i class="fas fa-futbol"></i> Sport</a></li>
+                <li><a href="#"><i class="fas fa-users"></i> Multiplayer</a></li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <section class="hero">
+                <h2>关于HTML5游戏</h2>
+            </section>
+
+            <div class="footer-info">
+                <h2>HTML5游戏平台介绍</h2>
+                <p>HTML5 Games是一个无需下载、无需注册的在线游戏平台，提供各种类型的HTML5游戏，让您随时随地都能享受游戏乐趣。不用担心付费等级、登录账号、下载应用程序、创建账户或其他任何麻烦。凭借各种形状和大小的游戏，现在是享受优质游戏体验的最佳时机。</p>
+                
+                <p>许多在线游戏网站受到服务器和机构的限制，因此您可能无法随时随地玩游戏。好消息是，在HTML5 Games上您不必担心这一点，因为我们的平台可以从世界任何地方访问。游戏变得如此简单，选择几乎无穷无尽，所以当您需要轻松放松时，为什么不来这里看看呢？</p>
+                
+                <h2>我们的游戏特色</h2>
+                <p>我们的HTML5游戏具有以下特点：</p>
+                <ul>
+                    <li>无需下载 - 所有游戏都可以直接在浏览器中玩</li>
+                    <li>免费游玩 - 所有游戏都是完全免费的</li>
+                    <li>无广告干扰 - 专注于游戏体验</li>
+                    <li>适合所有年龄段 - 从儿童到成人都能找到适合的游戏</li>
+                    <li>定期更新 - 我们不断添加新游戏</li>
+                    <li>响应式设计 - 在任何设备上都能流畅运行</li>
+                </ul>
+                
+                <div class="game-description">
+                    <h2>热门游戏介绍</h2>
+                    
+                    <div class="game-info">
+                        <div class="game-title">Match 3类游戏</div>
+                        <p>Match 3类游戏是最受欢迎的休闲游戏类型之一。在这类游戏中，您需要将三个或更多相同类型的元素匹配在一起以获得分数。我们的平台提供了多种Match 3游戏，如Garden Bloom和Zoo Boom，每一款都有独特的主题和玩法机制。</p>
+                    </div>
+                    
+                    <div class="game-info">
+                        <div class="game-title">益智游戏</div>
+                        <p>如果您喜欢挑战自己的思维能力，我们的益智游戏绝对不会让您失望。从经典的数独到创新的逻辑谜题，这些游戏将测试您的问题解决能力和创造性思维。尝试Color Water Sort 3D或Element Blocks，看看您能否解决所有关卡！</p>
+                    </div>
+                    
+                    <div class="game-info">
+                        <div class="game-title">卡牌游戏</div>
+                        <p>卡牌游戏是家庭聚会和朋友聚会的经典选择。在我们的平台上，您可以找到各种卡牌游戏的在线版本。如果您从未听说过Uno，那您错过了什么！这是最具标志性的卡牌游戏之一，任何家庭和朋友聚会都离不开它。我们的在线版本简单易玩，提供与实体游戏一样多的乐趣。您可以选择可爱的小头像，然后与机器人对手一起游戏。如果您以前从未玩过Uno，游戏的目标是成为第一个用完所有卡牌的玩家。您准备好接受挑战了吗？</p>
+                    </div>
+                    
+                    <div class="game-info">
+                        <div class="game-title">经典游戏</div>
+                        <p>另一个您可能听说过的流行游戏是井字棋（Tic Tac Toe）。为什么不在这个传统的X和O益智游戏中测试您的智力呢？您可以选择不同的难度级别，挑战自己的策略思维。这是一个简单但引人入胜的游戏，适合所有年龄段的玩家。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-links">
+                    <a href="#">关于我们</a>
+                    <a href="#">隐私政策</a>
+                    <a href="#">使用条款</a>
+                    <a href="#">联系我们</a>
+                </div>
+                <div class="copyright">
+                    &copy; 2025 HTML5 Games. 保留所有权利。
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

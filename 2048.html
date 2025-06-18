@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048 - HTML5 Games</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* 页面头部 */
+        .page-header {
+            background-color: #0e566c;
+            color: white;
+            padding: 20px 0;
+            margin-bottom: 20px;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .breadcrumb a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        .breadcrumb i {
+            margin-right: 5px;
+        }
+        
+        .breadcrumb .separator {
+            margin: 0 10px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .page-title {
+            display: flex;
+            align-items: center;
+        }
+        
+        .page-title i {
+            font-size: 32px;
+            margin-right: 15px;
+            color: #ff6b01;
+        }
+        
+        .page-title h1 {
+            font-size: 32px;
+            font-weight: bold;
+            margin: 0;
+        }
+        
+        /* 主要内容区域 */
+        .main-content {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+        
+        /* 游戏简介 */
+        .game-intro {
+            background-color: #e8f5e9;
+            padding: 20px;
+            border-radius: 8px 8px 0 0;
+        }
+        
+        .game-intro p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 0;
+        }
+        
+        /* 游戏容器 */
+        .game-container {
+            background-color: #000;
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 比例 */
+            height: 0;
+            overflow: hidden;
+        }
+        
+        .game-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        /* 游戏信息 */
+        .game-info {
+            padding: 30px;
+        }
+        
+        .game-info h2 {
+            font-size: 24px;
+            margin: 0 0 15px;
+            color: #333;
+        }
+        
+        .game-info p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #555;
+        }
+        
+        .section-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 25px 0 15px;
+            color: #333;
+        }
+        
+        .game-info ul {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .game-info li {
+            margin-bottom: 8px;
+            line-height: 1.5;
+            color: #555;
+        }
+        
+        /* 全屏按钮 */
+        .fullscreen-container {
+            text-align: center;
+            padding: 15px;
+            background-color: #f5f5f5;
+        }
+        
+        .fullscreen-btn {
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        .fullscreen-btn:hover {
+            background-color: #555;
+        }
+        
+        .fullscreen-btn i {
+            margin-right: 8px;
+        }
+        
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .page-title h1 {
+                font-size: 24px;
+            }
+            
+            .page-title i {
+                font-size: 24px;
+            }
+            
+            .game-info {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="page-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                <span class="separator">/</span>
+                <a href="arcade.html"><i class="fas fa-gamepad"></i> Puzzle</a>
+                <span class="separator">/</span>
+                <a href="#"></i>2048</a>
+            </div>
+            <div class="page-title">
+                
+                <h1>2048</h1>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <!-- 游戏简介 -->
+            <div class="game-intro">
+                <p>This addictive number puzzle has captured the attention of millions over the years.</p>
+            </div>
+            
+            <!-- 游戏容器 -->
+            <div class="game-container">
+                <iframe src="https://unblocked-games.s3.amazonaws.com/games/2025/html/2048/index.html" allowfullscreen></iframe>
+            </div>
+            
+            <!-- 全屏按钮 -->
+            <div class="fullscreen-container">
+                <button class="fullscreen-btn" id="fullscreenBtn"><i class="fas fa-expand"></i> Play Fullscreen</button>
+            </div>
+            
+            <!-- 游戏信息 -->
+            <div class="game-info">
+    <p>2048 is a single-player puzzle game where you combine tiles with the same number to create larger numbers. The ultimate goal? Reach the 2048 tile. The game is played on a 4x4 grid, and every swipe introduces a new tile onto the board. As the grid fills up, it becomes increasingly difficult to combine tiles. It's a test of both planning ahead and reacting to the current state of the board. Even if it's already very difficult to reach 2048 (even the developer says that he never reached 2048), the game doesn't stop there. You can continue matching tiles to see how high you can go. Some players have achieved tiles as high as 131,072!</p>
+    
+    <h2 class="section-title">Controls</h2>
+    <p><strong>For Computers:</strong> Use the arrow keys or WASD on your keyboard to slide tiles.<br>
+    <strong>For Mobile Devices:</strong> Swipe in the direction you want the tiles to move.</p>
+    
+    <h2 class="section-title">How to Play</h2>
+    <p>Open 2048 Unblocked on FreezeNova, and you'll see a 4x4 grid with two tiles already placed. These tiles typically have the numbers 2 or 4.<br>
+    Use the arrow keys (or swipe on mobile) to move all the tiles in one direction: up, down, left, or right.<br>
+    When tiles with the same number collide, they combine into one tile with a value equal to the sum of the two.</p>
+    <p>For example:</p>
+    <ul>
+        <li>Two "2" tiles combine into a "4."</li>
+        <li>Two "4" tiles combine into an "8."</li>
+        <li>…</li>
+        <li>Two "1024" tiles combine into a "2048."</li>
+    </ul>
+    <p>Plan your moves carefully to avoid running out of space. Keep your largest numbers in one corner of the board and focus on merging smaller tiles nearby.<br>
+    Keep merging tiles to create bigger numbers. The game ends when there are no more valid moves.</p>
+    
+    <h2 class="section-title">How 2048 Craze Started?</h2>
+    <p>2048 was created by Italian web developer Gabriele Cirulli in March 2014. The fun fact is that he developed the game in just one weekend as an experiment to see if he could program a game from scratch. Within a week of its release, 2048 had over 4 million players. The game quickly went viral, and thanks to its open-source nature, developers can create their own versions. This has led to countless clones and creative variations online. One of them is Ancient 2048 Unblocked, which you can play on FreezeNova for free.</p>
+    
+    <p>Gabriele was inspired by two similar titles: Threes!, and 1024. While Threes! introduced the sliding-tile mechanics in 2048, simplified and popularized the concept with its focus on doubling numbers. Its minimalist design and addictive gameplay struck a chord with players worldwide.</p>
+    
+    <p>The name 2048 comes from the game's goal of creating a tile with the number 2048. But why that specific number? It's not arbitrary, as 2048 is a power of two (2^11). This structure creates a sense of progression as you work your way up through 2, 4, 8, 16, 32 and beyond.</p>
+    
+    <h2 class="section-title">Legacy of 2048</h2>
+    <p>2048 is a cultural phenomenon that has stood the test of time. Despite its simple mechanics, it continues to attract players of all ages, proving that great design and gameplay don't need to be complicated. You might be a casual gamer or someone who just loves to play puzzle games at school, 2048 Unblocked offers fun for everyone. So, what are you waiting for? Open the game, slide those tiles, and see how far you can go!</p>
+</div>
+
+        </div>
+    </div>
+
+    <script>
+        // 全屏模式脚本
+        document.getElementById('fullscreenBtn').addEventListener('click', function() {
+            const iframe = document.querySelector('.game-container iframe');
+            
+            if (iframe) {
+                if (iframe.requestFullscreen) {
+                    iframe.requestFullscreen();
+                } else if (iframe.webkitRequestFullscreen) { // Safari
+                    iframe.webkitRequestFullscreen();
+                } else if (iframe.msRequestFullscreen) { // IE11
+                    iframe.msRequestFullscreen();
+                } else if (iframe.mozRequestFullScreen) { // Firefox
+                    iframe.mozRequestFullScreen();
+                }
+            }
+        });
+    </script>
+</body>
+</html>

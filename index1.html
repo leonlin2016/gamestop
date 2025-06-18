@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Games</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* 添加新的布局样式 */
+        .content-wrapper {
+            display: flex;
+            width: 100%;
+        }
+        
+        .games-container {
+            flex: 4; /* 占据4/5的空间 */
+        }
+        
+        .ad-container {
+            flex: 1; /* 占据1/5的空间 */
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-left: 1px solid #ddd;
+        }
+        
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 一行四列 */
+            gap: 15px;
+        }
+        
+        .ad-box {
+            background-color: #e0e0e0;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border: 1px dashed #aaa;
+        }
+        
+        .ad-box h4 {
+            margin-bottom: 10px;
+            color: #666;
+        }
+        
+        .ad-box i {
+            font-size: 30px;
+            margin-bottom: 10px;
+            color: #999;
+        }
+        
+            padding: 12px 0;
+            background-color: #0e566c;
+            color: white;
+            text-align: center;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.2s ease;
+            border: none;
+            cursor: pointer;
+        /* 添加Show all按钮样式 */
+        .show-all-btn {
+            display: block;
+            width: 200px;
+            margin: 25px auto 40px;
+            padding: 12px 0;
+            background-color: #0e566c;
+            color: white;
+            text-align: center;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.2s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        /* 响应式调整 */
+        @media (max-width: 1200px) {
+            .games-grid {
+                grid-template-columns: repeat(3, 1fr); /* 中等屏幕一行三列 */
+        .show-all-btn:hover {
+            background-color: #0a3e4f;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .content-wrapper {
+                flex-direction: column; /* 小屏幕垂直排列 */
+        /* 响应式调整 */
+        @media (max-width: 1200px) {
+            .games-grid {
+                grid-template-columns: repeat(3, 1fr); /* 中等屏幕一行三列 */
+            }
+        }
+        
+            .ad-container {
+                margin-top: 20px;
+                border-left: none;
+                border-top: 1px solid #ddd;
+        @media (max-width: 992px) {
+            .content-wrapper {
+                flex-direction: column; /* 小屏幕垂直排列 */
+            }
+            
+            .ad-box {
+                min-height: 120px;
+            .ad-container {
+                margin-top: 20px;
+                border-left: none;
+                border-top: 1px solid #ddd;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .games-grid {
+                grid-template-columns: repeat(2, 1fr); /* 小屏幕一行两列 */
+            .ad-box {
+                min-height: 120px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+        @media (max-width: 768px) {
+            .games-grid {
+                grid-template-columns: 1fr; /* 超小屏幕一行一列 */
+                grid-template-columns: repeat(2, 1fr); /* 小屏幕一行两列 */
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .games-grid {
+                grid-template-columns: 1fr; /* 超小屏幕一行一列 */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="logo">
+                <img src="images/html5-logo.png" alt="HTML5 Games">
+                <h1>HTML<span class="logo-number">5</span> GAMES</h1>
+            </div>
+            <div class="language-selector">
+                <button class="lang-btn">EN <i class="fas fa-caret-down"></i></button>
+                <div class="language-dropdown">
+                    <a href="#" data-lang="en">English</a>
+                    <a href="#" data-lang="zh">中文</a>
+                    <a href="#" data-lang="es">Español</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <nav class="sidebar" id="sidebar">
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="new.html"><i class="fas fa-star"></i> New</a></li>
+                <li><a href="Best.html"><i class="fas fa-thumbs-up"></i> Best</a></li>
+                <li><a href="#"><i class="fas fa-th"></i> Match 3</a></li>
+                <li><a href="#"><i class="fas fa-bullseye"></i> Bubble Shooter</a></li>
+                <li><a href="#"><i class="fas fa-puzzle-piece"></i> Puzzle</a></li>
+                <li><a href="#"><i class="fas fa-question-circle"></i> Quiz</a></li>
+                <li><a href="#"><i class="fas fa-list"></i> Cards</a></li>
+                <li><a href="#"><i class="fas fa-female"></i> Girls</a></li>
+                <li><a href="#"><i class="fas fa-running"></i> Jump & Run</a></li>
+                <li><a href="#"><i class="fas fa-gamepad"></i> Arcade</a></li>
+                <li><a href="#"><i class="fas fa-flag-checkered"></i> Racing</a></li>
+                <li><a href="#"><i class="fas fa-futbol"></i> Sport</a></li>
+                <li><a href="#"><i class="fas fa-users"></i> Multiplayer</a></li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <section class="hero">
+                <h2>HTML5 GAMES FOR YOUR WEBSITE</h2>
+                <div class="best-badge">
+                    <i class="fas fa-thumbs-up"></i> BEST
+                </div>
+                    </section>
+
+            <div class="content-wrapper">
+                <div class="games-container">
+                    <section class="games-grid">
+                        <div class="game-card">
+                            <img src="images/garden-bloom.jpg" alt="Garden Bloom">
+                            <h3>Garden Bloom</h3>
+                        </div>
+                        <div class="game-card">
+                            <img src="images/bubble-tower.jpg" alt="Bubble Tower 3D">
+                            <h3>Bubble Tower 3D</h3>
+                        </div>
+                        <div class="game-card">
+                            <img src="images/cannon-balls.jpg" alt="Cannon Balls 3D">
+                            <h3>Cannon Balls 3D</h3>
+                        </div>
+                        <div class="game-card">
+                            <img src="images/element-blocks.jpg" alt="Element Blocks">
+                            <h3>Element Blocks</h3>
+                        </div>
+                        <div class="game-card">
+                            <img src="images/zoo-boom.jpg" alt="Zoo Boom">
+                            <h3>Zoo Boom</h3>
+                        </div>
+                        <div class="game-card">
+                            <img src="images/moto-x3m.jpg" alt="Moto X3M Pool Party">
+                            <h3>Moto X3M Pool Party</h3>
+                        </div>
+                        <div class="game-card">
+                            <img src="images/element-blocks.jpg" alt="Element Blocks">
+                            <h3>Element Blocks</h3>
+                        </div>
+                        <div class="game-card">
+                            <img src="images/zoo-boom.jpg" alt="Zoo Boom">
+                            <h3>Zoo Boom</h3>
+                        </div>
+                    </section>
+                    <a href="Best.html" class="show-all-btn">Show all</a>
+                </div>
+                <div class="ad-container">
+                    <div class="ad-box">
+                        <i class="fas fa-ad"></i>
+                        <h4>Advertisement</h4>
+                        <p>300x250</p>
+                    </div>
+                    <div class="ad-box">
+                        <i class="fas fa-ad"></i>
+                        <h4>Advertisement</h4>
+                        <p>300x600</p>
+                    </div>
+                </div>
+            </div>
+
+            <section class="hero" style="margin-top: 30px;">
+                <h2>HTML5 GAMES FOR YOUR WEBSITE</h2>
+                <div class="best-badge">
+                    <i class="fas fa-thumbs-up"></i> NEW
+    </div>
+                    </section>
+
+            <div class="content-wrapper">
+                <div class="games-container">
+                    <section class="games-grid">
+                        <div class="game-card">
+                            <img src="images/garden-bloom.jpg" alt="Garden Bloom">
+                            <h3>Garden Bloom</h3>
+                    </div>
+                        <div class="game-card">
+                            <img src="images/bubble-tower.jpg" alt="Bubble Tower 3D">
+                            <h3>Bubble Tower 3D</h3>
+                        </div>
+                        <div class="game-card">
+                            <img src="images/cannon-balls.jpg" alt="Cannon Balls 3D">
+                            <h3>Cannon Balls 3D</h3>
+                    </div>
+                        <div class="game-card">
+                            <img src="images/element-blocks.jpg" alt="Element Blocks">
+                            <h3>Element Blocks</h3>
+                        </div>
+                        <div class="game-card">
+                            <img src="images/zoo-boom.jpg" alt="Zoo Boom">
+                            <h3>Zoo Boom</h3>
+                        </div>
+                        <div class="game-card">
+                        <div class="game-card">
+                            <img src="images/moto-x3m.jpg" alt="Moto X3M Pool Party">
+                            <h3>Moto X3M Pool Party</h3>
+                        </div>
+                        <div class="game-card">
+                            <img src="images/element-blocks.jpg" alt="Element Blocks">
+                            <h3>Element Blocks</h3>
+                        </div>
+                        <div class="game-card">
+                            <img src="images/zoo-boom.jpg" alt="Zoo Boom">
+                            <h3>Zoo Boom</h3>
+                </div>
+                    </section>
+                    <a href="new.html" class="show-all-btn">Show all</a>
+                        <div class="game-card">
+                            <img src="images/moto-x3m.jpg" alt="Moto X3M Pool Party">
+                            <h3>Moto X3M Pool Party</h3>
+                    </div>
+                    
+                <div class="ad-container">
+                    <div class="ad-box">
+                        <i class="fas fa-ad"></i>
+                        <h4>Advertisement</h4>
+                        <p>300x250</p>
+                    </section>
+                    </div>
+                    
+                    <div class="ad-box">
+                        <i class="fas fa-ad"></i>
+                        <h4>Advertisement</h4>
+                        <p>300x250</p>
+                <div class="ad-container">
+                    <div class="ad-box">
+                        <i class="fas fa-ad"></i>
+                        <h4>Advertisement</h4>
+                        <p>300x250</p>
+                    </div>
+            </div>
+                    
+                    <div class="ad-box">
+                        <i class="fas fa-ad"></i>
+                        <h4>Advertisement</h4>
+                        <p>300x600</p>
+    </div>
+            </div>
+            </div>
+        </main>
+            </div>
+
+            <section class="hero" style="margin-top: 30px;">
+                <h2>HTML5 GAMES FOR YOUR WEBSITE</h2>
+                <div class="best-badge">
+                    <i class="fas fa-thumbs-up"></i> NEW
+    </div>
+            </section>
+
+            <div class="content-wrapper">
+                <div class="games-container">
+                    <section class="games-grid">
+                        <div class="game-card">
+                            <img src="images/garden-bloom.jpg" alt="Garden Bloom">
+                            <h3>Garden Bloom</h3>
+                        </div>
+                        <div class="game-card">
+                            <img src="images/bubble-tower.jpg" alt="Bubble Tower 3D">
+                            <h3>Bubble Tower 3D</h3>
+                        </div>
+                        <div class="game-card">
+                            <img src="images/cannon-balls.jpg" alt="Cannon Balls 3D">
+                            <h3>Cannon Balls 3D</h3>
+                        </div>
+                        <div class="game-card">
+                            <img src="images/element-blocks.jpg" alt="Element Blocks">
+                            <h3>Element Blocks</h3>
+                        </div>
+                        <div class="game-card">
+                            <img src="images/zoo-boom.jpg" alt="Zoo Boom">
+                            <h3>Zoo Boom</h3>
+                        </div>
+                        <div class="game-card">
+                            <img src="images/moto-x3m.jpg" alt="Moto X3M Pool Party">
+                            <h3>Moto X3M Pool Party</h3>
+                        </div>
+                        <div class="game-card">
+                            <img src="images/element-blocks.jpg" alt="Element Blocks">
+                            <h3>Element Blocks</h3>
+                        </div>
+                        <div class="game-card">
+                            <img src="images/zoo-boom.jpg" alt="Zoo Boom">
+                            <h3>Zoo Boom</h3>
+                        </div>
+                    </section>
+                </div>
+                
+                <div class="ad-container">
+                    <div class="ad-box">
+                        <i class="fas fa-ad"></i>
+                        <h4>Advertisement</h4>
+                        <p>300x250</p>
+                    </div>
+                    
+                    <div class="ad-box">
+                        <i class="fas fa-ad"></i>
+                        <h4>Advertisement</h4>
+                        <p>300x250</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
