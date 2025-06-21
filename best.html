@@ -12,7 +12,7 @@
 </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Best HTML5 Games</title>
+    <title>New HTML5 Games</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -132,6 +132,98 @@
         .load-more:hover {
             background-color: #0a3e4f;
         }
+        
+        /* 新增样式 */
+        .hero {
+            position: relative;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .best-badge {
+            position: absolute;
+            top: -15px;
+            right: 20px;
+            background-color: #ff6b01;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+        
+        .best-badge i {
+            margin-right: 5px;
+        }
+        
+        .content-wrapper {
+            display: flex;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+        
+        .games-container {
+            flex: 3;
+        }
+        
+        .ad-container {
+            flex: 1;
+            margin-left: 20px;
+        }
+        
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .show-all-btn {
+            display: block;
+            width: 200px;
+            margin: 30px auto;
+            padding: 12px 0;
+            background-color: #0e566c;
+            color: white;
+            text-align: center;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .ad-box {
+            background-color: #f5f5f5;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            border-radius: 4px;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .ad-box i {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #666;
+        }
+		.page-title {
+    text-align: right; /* 让内容靠右 */
+}
+
+.page-title h1 {
+    font-size: 16px; /* 调整字体大小 */
+    display: inline-block; /* 确保与图标在同一行 */
+    margin: 0; /* 去掉默认的外边距 */
+}
+
+.page-title i {
+    font-size: 14px; /* 调整图标大小 */
+    margin-right: 8px; /* 增加图标和文字的间距 */
+}
+
     </style>
 </head>
 <body>
@@ -142,7 +234,7 @@
             </button>
             <div class="logo">
                 <img src="images/html5-logo.png" alt="HTML5 Games">
-                <h1>HTML<span class="logo-number">5</span> GAMES</h1>
+                <h1>Free Online Games</h1>
             </div>
             <div class="language-selector">
                 <button class="lang-btn">EN <i class="fas fa-caret-down"></i></button>
@@ -156,154 +248,103 @@
     </header>
 
     <div class="main-container">
-        <nav class="sidebar" id="sidebar">
-            <ul class="nav-menu">
-                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="#"><i class="fas fa-star"></i> New</a></li>
-                <li><a href="best.html" class="active"><i class="fas fa-thumbs-up"></i> Best</a></li>
-                <li><a href="#"><i class="fas fa-th"></i> Match 3</a></li>
-                <li><a href="#"><i class="fas fa-bullseye"></i> Bubble Shooter</a></li>
-                <li><a href="#"><i class="fas fa-puzzle-piece"></i> Puzzle</a></li>
-                <li><a href="#"><i class="fas fa-question-circle"></i> Quiz</a></li>
-                <li><a href="#"><i class="fas fa-cards"></i> Cards</a></li>
-                <li><a href="#"><i class="fas fa-female"></i> Girls</a></li>
-                <li><a href="#"><i class="fas fa-running"></i> Jump & Run</a></li>
-                <li><a href="#"><i class="fas fa-gamepad"></i> Arcade</a></li>
-                <li><a href="#"><i class="fas fa-flag-checkered"></i> Racing</a></li>
-                <li><a href="#"><i class="fas fa-futbol"></i> Sport</a></li>
-                <li><a href="#"><i class="fas fa-users"></i> Multiplayer</a></li>
-                <li><a href="#"><i class="fas fa-list"></i> All Games</a></li>
-            </ul>
-        </nav>
+       
 
         <main class="content">
             <div class="page-header">
                 <div class="container">
                     <div class="breadcrumb">
                         <a href="index.html"><i class="fas fa-home"></i> Home</a>
-                        <span style="margin: 0 10px; color: #ff6b01;">></span>
-                        <span>Best Games</span>
+                        
                     </div>
                     <div class="page-title">
-                        <i class="fas fa-thumbs-up"></i>
-                        <h1>BEST GAMES</h1>
+                    <i class="fas fa-star"></i>
+                    <h1>BEST GAMES</h1>
                     </div>
-                    <p>Our collection of the highest rated and most popular HTML5 games</p>
+
+                    
                 </div>
             </div>
 
-            <section class="best-games-grid">
-                <div class="game-card">
-                    <div class="game-rating">9.5</div>
-                    <img src="images/garden-bloom.jpg" alt="Garden Bloom">
-                    <div class="game-info">
-                        <h3>Garden Bloom</h3>
-                        <div class="game-category">Match 3</div>
-                        <div class="game-stats">
-                            <span><i class="fas fa-play"></i> 125K</span>
-                            <span><i class="fas fa-star"></i> 4.8/5</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="game-card">
-                    <div class="game-rating">9.3</div>
-                    <img src="images/bubble-tower.jpg" alt="Bubble Tower 3D">
-                    <div class="game-info">
-                        <h3>Bubble Tower 3D</h3>
-                        <div class="game-category">Bubble Shooter</div>
-                        <div class="game-stats">
-                            <span><i class="fas fa-play"></i> 98K</span>
-                            <span><i class="fas fa-star"></i> 4.7/5</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="game-card">
-                    <div class="game-rating">9.2</div>
-                    <img src="images/cannon-balls.jpg" alt="Cannon Balls 3D">
-                    <div class="game-info">
-                        <h3>Cannon Balls 3D</h3>
-                        <div class="game-category">Arcade</div>
-                        <div class="game-stats">
-                            <span><i class="fas fa-play"></i> 87K</span>
-                            <span><i class="fas fa-star"></i> 4.6/5</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="game-card">
-                    <div class="game-rating">9.0</div>
-                    <img src="images/element-blocks.jpg" alt="Element Blocks">
-                    <div class="game-info">
-                        <h3>Element Blocks</h3>
-                        <div class="game-category">Puzzle</div>
-                        <div class="game-stats">
-                            <span><i class="fas fa-play"></i> 76K</span>
-                            <span><i class="fas fa-star"></i> 4.5/5</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="game-card">
-                    <div class="game-rating">8.9</div>
-                    <img src="images/zoo-boom.jpg" alt="Zoo Boom">
-                    <div class="game-info">
-                        <h3>Zoo Boom</h3>
-                        <div class="game-category">Match 3</div>
-                        <div class="game-stats">
-                            <span><i class="fas fa-play"></i> 65K</span>
-                            <span><i class="fas fa-star"></i> 4.4/5</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="game-card">
-                    <div class="game-rating">8.8</div>
-                    <img src="images/moto-x3m.jpg" alt="Moto X3M Pool Party">
-                    <div class="game-info">
-                        <h3>Moto X3M Pool Party</h3>
-                        <div class="game-category">Racing</div>
-                        <div class="game-stats">
-                            <span><i class="fas fa-play"></i> 54K</span>
-                            <span><i class="fas fa-star"></i> 4.3/5</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="game-card">
-                    <div class="game-rating">8.7</div>
-                    <img src="images/nom-run.jpg" alt="Nom Run">
-                    <div class="game-info">
-                        <h3>Nom Run</h3>
-                        <div class="game-category">Jump & Run</div>
-                        <div class="game-stats">
-                            <span><i class="fas fa-play"></i> 48K</span>
-                            <span><i class="fas fa-star"></i> 4.2/5</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="game-card">
-                    <div class="game-rating">8.6</div>
-                    <img src="images/tower-crash.jpg" alt="Tower Crash 3D">
-                    <div class="game-info">
-                        <h3>Tower Crash 3D</h3>
-                        <div class="game-category">Puzzle</div>
-                        <div class="game-stats">
-                            <span><i class="fas fa-play"></i> 42K</span>
-                            <span><i class="fas fa-star"></i> 4.1/5</span>
-                        </div>
-                    </div>
-                </div>
+            <!-- NEW GAMES SECTION -->
+            <section class="hero" style="margin-top: 30px;">
+                <h2>Our collection of the best HTML5 games</h2>
+                
             </section>
+            <div class="content-wrapper">
+                <div class="games-container">
+                    <section class="games-grid">
+                        <div class="game-card">
+						<a href="Garden Bloom.html">
+                            <img src="images/garden-bloom.jpg" alt="Garden Bloom">
+							</a>
+                            <h3>Garden Bloom</h3>
+                        </div>
+                        <div class="game-card">
+						<a href="BubbleTower3D.html">
+                            <img src="images/bubble-tower.jpg" alt="Bubble Tower 3D">
+							</a>
+                            <h3>Bubble Tower 3D</h3>
+                        </div>
+                        <div class="game-card">
+						<a href="CannonBalls3D.html">
+                            <img src="images/cannon-balls.jpg" alt="Cannon Balls 3D">
+							</a>
+                            <h3>Cannon Balls 3D</h3>
+                        </div>
+						
+                        <div class="game-card">
+                          <a href="2048.html">
+                            <img src="images/2048.jpg" alt="2048">
+                          </a>
+                            <h3>2048</h3>
+                        </div>
 
-            <a href="#" class="load-more">Load More Games</a>
+						
+                        <div class="game-card">
+						<a href="MonsterSurvivors.html">
+                            <img src="images/monster-survivors.jpg" alt="Monster Survivors">
+							</a>
+                            <h3>Monster Survivors</h3>
+                        </div>
+						
+                        <div class="game-card">
+						<a href="MotoX3MPoolParty.html">
+                            <img src="images/moto-x3m.jpg" alt="Moto X3M Pool Party">
+							</a>
+                            <h3>Moto X3M Pool Party</h3>
+                        </div>
+                        <div class="game-card">
+						<a href="ElementBlocks.html">
+                            <img src="images/element-blocks.jpg" alt="Element Blocks">
+							</a>
+                            <h3>Element Blocks</h3>
+                        </div>
+                        <div class="game-card">
+						<a href="ZooBoom.html">
+                            <img src="images/zoo-boom.jpg" alt="Zoo Boom">
+							</a>
+                            <h3>Zoo Boom</h3>
+                        </div>
+                    </section>
+                    <a href="Best.html" class="show-all-btn">Show all</a>
+                </div>
+                
+            </div>
         </main>
     </div>
 
     <script src="script.js"></script>
     <script>
-        // 为Best页面添加特定的JavaScript
+        // 为New页面添加特定的JavaScript
         document.addEventListener('DOMContentLoaded', function() {
             // 高亮当前活动的导航项
             const navItems = document.querySelectorAll('.nav-menu a');
             navItems.forEach(item => {
-                if (item.getAttribute('href') === 'best.html') {
+                if (item.getAttribute('href') === 'new.html') {
                     item.classList.add('active');
+                } else if (item.classList.contains('active')) {
+                    item.classList.remove('active');
                 }
             });
             
