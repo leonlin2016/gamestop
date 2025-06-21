@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NMKJZW3YNX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NMKJZW3YNX');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free HTML5 Games</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* 页面头部 */
+        .page-header {
+            background-color: #0e566c;
+            color: white;
+            padding: 20px 0;
+            margin-bottom: 20px;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .breadcrumb a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        .breadcrumb i {
+            margin-right: 5px;
+        }
+        
+        .breadcrumb .separator {
+            margin: 0 10px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .page-title {
+            display: flex;
+            align-items: center;
+        }
+        
+        .page-title i {
+            font-size: 32px;
+            margin-right: 15px;
+            color: #ff6b01;
+        }
+        
+        .page-title h1 {
+            font-size: 32px;
+            font-weight: bold;
+            margin: 0;
+        }
+        
+        /* 主要内容区域 */
+        .main-content {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+        
+        /* 游戏简介 */
+        .game-intro {
+            background-color: #e8f5e9;
+            padding: 20px;
+            border-radius: 8px 8px 0 0;
+        }
+        
+        .game-intro p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 0;
+        }
+        
+        /* 游戏容器 */
+        .game-container {
+            background-color: #000;
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 比例 */
+            height: 0;
+            overflow: hidden;
+        }
+        
+        .game-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        /* 游戏信息 */
+        .game-info {
+            padding: 30px;
+        }
+        
+        .game-info h2 {
+            font-size: 24px;
+            margin: 0 0 15px;
+            color: #333;
+        }
+        
+        .game-info p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #555;
+        }
+        
+        .section-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 25px 0 15px;
+            color: #333;
+        }
+        
+        .game-info ul {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .game-info li {
+            margin-bottom: 8px;
+            line-height: 1.5;
+            color: #555;
+        }
+        
+        /* 全屏按钮 */
+        .fullscreen-container {
+            text-align: center;
+            padding: 15px;
+            background-color: #f5f5f5;
+        }
+        
+        .fullscreen-btn {
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        .fullscreen-btn:hover {
+            background-color: #555;
+        }
+        
+        .fullscreen-btn i {
+            margin-right: 8px;
+        }
+        
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .page-title h1 {
+                font-size: 24px;
+            }
+            
+            .page-title i {
+                font-size: 24px;
+            }
+            
+            .game-info {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="page-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                
+            </div>
+            <div class="page-title">
+                
+                <h1>Rise Up</h1>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <!-- 游戏简介 -->
+            <div class="game-intro">
+                <p></p>
+            </div>
+            
+            <!-- 游戏容器 -->
+            <div class="game-container">
+                <iframe src="https://play.famobi.com/wrapper/rise-up/A1000-10" allowfullscreen></iframe>
+            </div>
+            
+            <!-- 全屏按钮 -->
+            <div class="fullscreen-container">
+                <button class="fullscreen-btn" id="fullscreenBtn"><i class="fas fa-expand"></i> Play Fullscreen</button>
+            </div>
+            
+            <!-- 游戏信息 -->
+            <div class="game-info">
+			<p>Shield, dodge, and soar to new heights in Rise Up – the ultimate test of survival! In this thrilling and addictive arcade game, your mission is simple yet challenging: protect the rising balloon at all costs! As it ascends, perilous obstacles emerge, threatening to burst it. Your job? Maneuver your shield to deflect objects, clear the path, and keep the balloon safe. With the difficulty escalating every moment, your quick reflexes and sharp strategy will be put to the test. How high can you go? Take on the challenge and aim for the top score in Rise Up!</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 全屏模式脚本
+        document.getElementById('fullscreenBtn').addEventListener('click', function() {
+            const iframe = document.querySelector('.game-container iframe');
+            
+            if (iframe) {
+                if (iframe.requestFullscreen) {
+                    iframe.requestFullscreen();
+                } else if (iframe.webkitRequestFullscreen) { // Safari
+                    iframe.webkitRequestFullscreen();
+                } else if (iframe.msRequestFullscreen) { // IE11
+                    iframe.msRequestFullscreen();
+                } else if (iframe.mozRequestFullScreen) { // Firefox
+                    iframe.mozRequestFullScreen();
+                }
+            }
+        });
+    </script>
+</body>
+</html>
